@@ -506,7 +506,7 @@ void LogoFrame::OnSaveAs(wxCommandEvent& WXUNUSED(event)) {
 #else
 			      wxStandardPaths::Get().GetDocumentsDir() :
 #endif
-			      *wxEmptyString),
+			      wxString("")),
 			    wxEmptyString,
 			    _T("Logo workspaces(*.lg)|*.lg|All files(*)|*"),
 //			    "*",
@@ -542,7 +542,7 @@ void LogoFrame::OnLoad(wxCommandEvent& WXUNUSED(event)){
 #else
 	    wxStandardPaths::Get().GetDocumentsDir() :
 #endif
-			  *wxEmptyString),
+			  wxString("")),
 	 wxEmptyString,
 	 _T("Logo workspaces(*.lg)|*.lg|All files(*)|*"),
 //	 "*",
