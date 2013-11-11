@@ -31,11 +31,11 @@ html/usermanual_1.html: usermanual.texi
 ship:
 	-rm -f *.{aux,cp,cps,dvi,fn,ky,log,pg,toc,tp,vr}
 
-install: all
-	for d in $(INFODIR) $(DOCSDIR) $(HTMLDIR); do [ -d $$d ] || mkdir -p $$d || exit 1; done
-	-cp -f *.info* $(INFODIR)/.
-	-cp -f html/*.html $(HTMLDIR)/.
-	-cp -f usermanual.ps $(DOCSDIR)/.
-	-cp -f usermanual.pdf $(DOCSDIR)/.
-	-cp -f usermanual.texi $(DOCSDIR)/.
-	-cp -f ../usermanual $(DOCSDIR)/.
+install:
+	for d in $(INFODIR) $(DOCSDIR) $(HTMLDIR); do [ -d $(DESTDIR)$$d ] || mkdir -p $(DESTDIR)$$d || exit 1; done
+	-cp -f *.info* $(DESTDIR)$(INFODIR)/.
+	-cp -f html/*.html $(DESTDIR)$(HTMLDIR)/.
+	-cp -f usermanual.ps $(DESTDIR)$(DOCSDIR)/.
+	-cp -f usermanual.pdf $(DESTDIR)$(DOCSDIR)/.
+	-cp -f usermanual.texi $(DESTDIR)$(DOCSDIR)/.
+	-cp -f ../usermanual $(DESTDIR)$(DOCSDIR)/.
