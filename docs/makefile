@@ -3,7 +3,8 @@ INFODIR	      = $(prefix)/info
 DOCSDIR	      = $(LIBLOC)/docs
 HTMLDIR	      = $(DOCSDIR)/html
 
-all: usermanual.ps usermanual.pdf html/usermanual_1.html ucblogo.info
+all: 
+texdocs: usermanual.ps usermanual.pdf html/usermanual_1.html ucblogo.info
 
 ucblogo.info: usermanual.texi
 	makeinfo usermanual.texi
