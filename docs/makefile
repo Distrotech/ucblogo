@@ -23,9 +23,9 @@ usermanual.pdf: usermanual.ps usermanual.dvi
 
 html/usermanual_1.html: usermanual.texi
 	for d in html; do [ -d $$d ] || mkdir -p $$d || exit 1; done
-	texi2html --expand tex --split chapter --no-iftex usermanual.texi
-	mv usermanual/*.html html
-	rmdir usermanual
+#	texi2html --expand tex --split chapter --no-iftex usermanual.texi
+#	mv usermanual/*.html html
+#	rmdir usermanual
 
 ship:
 	-rm -f *.{aux,cp,cps,dvi,fn,ky,log,pg,toc,tp,vr}
